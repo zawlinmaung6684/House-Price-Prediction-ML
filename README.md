@@ -44,7 +44,7 @@ where
 
 $$f_{\overrightarrow{w}, b}(\vec{x}) = b + w_1x_1 + w_2x_2 + ... + w_nx_n$$
 
-The dataset has over 70 attributes, some of which are potentially suffering from multicollinearity that could result in the overfitting problem. That’s why, I chose Ridge Regression (L2 Regularization) over Simple Regression to train the model. The main idea of this technique is that it reduces variance while introducing a certain amount of bias to the model by shrinking less important coefficients to zero.
+The dataset has over 70 attributes, some of which are potentially suffering from multicollinearity that could result in the overfitting problem. That’s why, I chose Ridge Regression (L2 Regularization) over Simple Regression to train the model. The main idea of this technique is that it reduces **_variance_** while introducing a certain amount of **_bias_** to the model by shrinking less important coefficients to zero.
 
 A major challenge of this regularization method is estimating an optimal $\lambda$ value for the penalty term to find the best fit line of the model. A very small $\lambda$ value will definitely cause an overfitting problem because the model is learning every single feature; whereas a very large $\lambda$ value will lead to an underfitting problem because the model will not be able to learn the features well enough.
 
@@ -55,4 +55,4 @@ Here, I used three different ways to find a good $\lambda$ value: **Ridge Trace*
 2. **Bias-Variance Tradeoff.** It is obvious in Ridge Regression that the bias increases while the variance decreases with the increase of $\lambda$ value.
 3. **RidgeCV.** RidgeCV is a `sklearn` built-in method to which you can throw a number of $\lambda$ values, and it will automatically choose the best one for your model.
 
-After the training the model again with a $\lambda$ value of 10, the training score was reduced to $0.890$, but the validation data performed better with an accuracy score of $0.868$.
+After training the model again with a $\lambda$ value of 10, the training score was reduced to $0.890$, but the validation data performed better with an accuracy score of $0.868$.
