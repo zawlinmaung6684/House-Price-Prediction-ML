@@ -38,7 +38,7 @@ It is more like my personal preference to use `OneHotEncoder` instead of `Ordina
 
 **Ridge Regression (L2 Regularization)**
 
-$$RSS_{ridge}(\vec{w}, b) = \frac{1}{2m} \sum_{i=1}^{m} (y^{(i)} - f_{\overrightarrow{w}, b}(\vec{x})) + \lambda \sum_{j=1}^{k} w_j^2$$
+$$RSS_{ridge}(\vec{w}, b) = \frac{1}{2m} \sum_{i=1}^{m} (y^{(i)} - f_{\overrightarrow{w}, b}(\vec{x}))^2 + \lambda \sum_{j=1}^{k} w_j^2$$
 
 where
 
